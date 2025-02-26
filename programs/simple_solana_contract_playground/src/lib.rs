@@ -13,7 +13,7 @@ pub mod simple_solana_contract_playground {
     }
 
     pub fn increment(ctx: Context<Increment>) -> Result<()> {
-      let base_account = &mut ctx.accounts.base_account;
+        let base_account = &mut ctx.accounts.base_account;
         base_account.counter += 1;
         Ok(())
     }
@@ -21,20 +21,20 @@ pub mod simple_solana_contract_playground {
 
 #[derive(Accounts)]
 pub struct Initialize<'info> {
-  #[account(init, payer = user, space = 8 + 8)]
-  pub base_account: Account<'info, BaseAccount>,
-  #[account(mut)]
-  pub user: Signer<'info>,
-  pub system_program: Program<'info, System>,
+    #[account(init, payer = user, space = 8 + 8)]
+    pub base_account: Account<'info, BaseAccount>,
+    #[account(mut)]
+    pub user: Signer<'info>,
+    pub system_program: Program<'info, System>,
 }
 
 #[derive(Accounts)]
 pub struct Increment<'info> {
-  #[account(mut)]
-  pub base_account: Account<'info, BaseAccount>,
+    #[account(mut)]
+    pub base_account: Account<'info, BaseAccount>,
 }
 
 #[account]
 pub struct BaseAccount {
-  pub counter: u64,
+    pub counter: u64,
 }
