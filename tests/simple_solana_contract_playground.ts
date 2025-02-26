@@ -20,7 +20,7 @@ describe("simple_solana_contract_playground", () => {
         baseAccount: baseAccount.publicKey, // Передаём PDA
         user: provider.wallet.publicKey,
         systemProgram: SystemProgram.programId,
-      })
+      } as any)
       .signers([baseAccount])
       .rpc();
 
