@@ -11,7 +11,7 @@ simple_solana_contract_playground = "EYKoYivGj6wMVhemQmoiM8GyPqDebXmWjp7ybDPwXji
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
+cluster = "Devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
