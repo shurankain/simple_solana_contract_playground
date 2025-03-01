@@ -4,7 +4,7 @@
 resolution = true
 skip-lint = false
 
-[programs.localnet]
+[programs.devnet]
 simple_solana_contract_playground = "EYKoYivGj6wMVhemQmoiM8GyPqDebXmWjp7ybDPwXji8"
 
 [registry]
